@@ -50,31 +50,9 @@
    }
    ```
 
-2. download sample image from github repo <https://github.com/basir/nextjs-shoppoing-cart-like-amazon>
-3. Set base url from
+2. download sample image from github repo [https://github.com/basir/nextjs-shoppoing-cart-like-amazon](https://github.com/basir/nextjs-shoppoing-cart-like-amazon)
 
-   ```js
-   // utils/constants.js
-   export const BASE_URL =
-     process.env.NODE_ENV === 'development'
-       ? 'http://localhost:3000'
-       : 'https://your-domain.com'
-   ```
-
-4. Get products
-
-   ```js
-   // app/page.js
-   async function getData() {
-     const res = await fetch(BASE_URL + '/api/products')
-     if (!res.ok) {
-       throw new Error('Failed to fetch data')
-     }
-     return res.json()
-   }
-   ```
-
-5. create product rating component
+3. create product rating component
 
    ```js
    // npm i @smastrom/react-rating
@@ -83,8 +61,6 @@
    import React from 'react'
    import '@smastrom/react-rating/style.css'
    import { Rating } from '@smastrom/react-rating'
-
-   import '@smastrom/react-rating/style.css'
 
    export default function ProductRate({ rate, count }) {
      return (
@@ -96,7 +72,7 @@
    }
    ```
 
-6. Create product component
+4. Create product component
 
    ```js
    // components/ProductItem.js
@@ -127,7 +103,7 @@
    }
    ```
 
-7. Add `card` css class
+5. Add `card` css class
 
    ```css
    /* app/global.css */
@@ -136,12 +112,12 @@
    }
    ```
 
-8. Render products
+6. Render products
 
    ```js
    // app/page.js
-   export default async function Home() {
-     const products = await getData()
+   export default function Home() {
+     const { products } = data
 
      return (
        <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
