@@ -6,6 +6,7 @@
    // redux/slices/cartSlice.js
    const initialState = {loading: true, ...}
 
+
    const cartSlice = createSlice({
      reducers: {
        addToCart: (state, action) => {
