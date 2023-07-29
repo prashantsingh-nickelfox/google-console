@@ -30,8 +30,6 @@
    ```js
    // redux/store.js
    import { configureStore } from '@reduxjs/toolkit'
-   import { setupListeners } from '@reduxjs/toolkit/dist/query'
-
    import cartSliceReducer from './slices/cartSlice'
 
    export const store = configureStore({
@@ -40,8 +38,6 @@
      },
      devTools: process.env.NODE_ENV !== 'production',
    })
-
-   setupListeners(store.dispatch)
    ```
 
 4. create StoreProvider component
