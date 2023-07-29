@@ -5,17 +5,11 @@
    ```js
    //app/product/[id]/page.js
 
-   const getProduct = async (id) => {
-     const res = await fetch(`${BASE_URL}/api/products/${id}`)
-     if (!res.ok) {
-       throw new Error('Failed to fetch data')
+   export default function ProductDetailPage({ params: { id } }) {
+     const product = data.products.find((x) => x.id === id)
+     if (!product) {
+       return <div>Product Not Found</div>
      }
-     const product = await res.json()
-     return product
-   }
-
-   export default async function ProductDetailPage({ params: { id } }) {
-     const product = await getProduct(id)
      return (
        <div>
          <div className="py-2">
