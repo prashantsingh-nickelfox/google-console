@@ -7,16 +7,13 @@
    export default function Header() {
      return (
        <header>
-         <nav className="flex h-12 items-center px-4 justify-between shadow-md bg-gray-800 text-white">
+         <nav className="flex justify-between items-center h-12 px-4 shadow-md bg-gray-800 text-white">
            <Link href="/" className="text-lg font-bold">
              Amazon Shopping Cart
            </Link>
            <div>
              <span className="cart-badge">0</span>
-             <Link href="/cart" className="flex justify-between items-end">
-               <span>Cart</span>
-             </Link>
-             <div className="w-0 h-0 border-8 border-solid border-transparent border-r-gray-300 dark:border-r-gray-900 absolute ml-[73px] -mt-5"></div>
+             <Link href="/cart">Cart</Link>
            </div>
          </nav>
        </header>
