@@ -15,15 +15,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta
-          name="google-site-verification"
-          content="bulnV3xetCkwxyl18K79PDQnrh0FWzAjyMyPHAMHfwU"
-        />
-        <meta property="og:title" content="Code Venkey Samples" />
-        <meta property="og:type" content="website" />
-        <meta
           property="og:image"
           content="https://kvkirthy.github.io/code-samples/assets/dino.png"
         />
+        <meta property="og:title" content="Code Venkey Samples" />
+        <meta property="og:type" content="website" />
         <meta
           property="og:url"
           content="https://kvkirthy.github.io/code-sample/"
